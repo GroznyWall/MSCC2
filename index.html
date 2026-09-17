@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>МСКК Калькулятор</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ссылка на манифест для поддержки ПВА -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+    <!-- Подключаем готовый эмулятор консоли, чтобы твой C# работал без изменений -->
+    <script src="https://jsdelivr.net"></script>
+    <style>
+        body { background: #000; margin: 0; padding: 10px; }
+        #console { width: 100vw; height: 100vh; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <div id="console"></div>
+    <script>
+        // Запуск твоего скомпилированного C# файла в браузере
+        DotnetWebConsole.run("main.wasm", "#console");
+    </script>
+</body>
+</html>
